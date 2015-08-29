@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Nick Hynes - Calendar</title>
+  <link type="text/css" rel="stylesheet" href="calendar.css"></link>
+  <script>
+  /*
+  @licstart  The following is the entire license notice for the
+  JavaScript code in this page.
+
+  Copyright (C) 2014 Nick Hynes
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+  OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIESOF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+  THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+  @licend  The above is the entire license notice for the JavaScript code in this page.
+   */
+  </script>
+</head>
+<body>
+  <header>
+    <h1 class="heading">Nick Hynes - Calendar</h1>
+  </header>
+  <div class="calendar-controls">
+      <button id="prevWeek">&larr;</button>
+      <h2 class="week-of">This week</h2>
+      <button id="nextWeek">&rarr;</button>
+  </div>
+  <table class="calendar">
+    <thead class="calendar-heading">
+      <th class="timeslot-heading"></th>
+      <th class="day-heading weekend">Sunday</th>
+      <th class="day-heading weekday">Monday</th>
+      <th class="day-heading weekday">Tuesday</th>
+      <th class="day-heading weekday">Wednesday</th>
+      <th class="day-heading weekday">Thursday</th>
+      <th class="day-heading weekday">Friday</th>
+      <th class="day-heading weekend">Saturday</th>
+    </thead>
+    <tbody class="calendar-body">
+    </tbody>
+  </table>
+  <script type="application/javascript" src="spin.min.js"></script>
+  <script type="application/javascript" src="zepto.min.js"></script>
+  <script type="application/javascript" src="moment.min.js"></script>
+  <script type="application/javascript">
+    config = { 'url': '/freebusy.php/nhynes/calendar', 'day': [ 8, 18 ], };
+  </script>
+  <script type="application/javascript" src="calendar.js"></script>
+</body>
+</html>

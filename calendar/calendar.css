@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Merriweather'), url(merriweather.woff) format('woff');
+}
+
+html, body {
+    background: url('diamond_eyes.png') repeat; /* subtlepatterns.com */
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    height: 99%;
+    font-family: 'Merriweather', serif;
+}
+
+
+header {
+    margin: 10px 0 0 20px;
+    text-align: left;
+}
+header .heading {
+    font-size: 1.5em;
+    margin: 0;
+    text-decoration: underline;
+}
+
+
+.calendar-controls {
+    margin: 13px 0;
+}
+
+.calendar-controls button {
+    background-color: transparent;
+    border: 0px solid transparent;
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 40px;
+    padding: 0;
+}
+.calendar-controls button:hover {
+    color: #777;
+}
+.week-of {
+    display: inline;
+    font-size: 1.3em;
+    vertical-align: -moz-calc(5px);
+}
+
+
+.calendar {
+    width: 96%;
+    border-spacing: 0;
+    height: 85%;
+}
+
+.day-heading {
+    width: 12.7%;
+    padding: 6px 0;
+}
+.day-heading.today {
+    background-color: lightgoldenrodyellow;
+}
+
+.timeslot-heading {
+    text-align: right;
+    width: 50px;
+    padding-right: 7px;
+    font-size: .9em;
+}
+
+.timeslot-heading span {
+    position: relative;
+    top: -18px;
+}
+
+.event {
+    vertical-align: top;
+}
+
+.event.busy {
+    background-color: aliceblue;
+    border: 1px solid #aaa;
+    box-shadow: 0 0 10px -1px #aaa inset;
+    font-size: 70%;
+    text-align: left;
+    padding: 4px 10px;
+    color: #333;
+}
+
+.event.busy.past {
+    opacity: .6;
+}
+
+.event.busy span {
+    display: inline-block;
+    margin: 10px;
+}
+
+.timeslot:nth-of-type( odd ) .event.free {
+    border-top: 1px solid gray;
+    border-bottom: 1px solid #ccc;
+}
+
+.timeslot:last-of-type .event.busy {
+    border-bottom: 1px solid transparent;
+}
+.timeslot:last-of-type .event.free {
+    border-bottom: 1px solid transparent;
+}
